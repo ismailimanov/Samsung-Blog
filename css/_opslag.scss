@@ -1,0 +1,204 @@
+header {
+  background: linear-gradient(to bottom, darken(rgba(33, 150, 243,0.65), 20%) 0%,rgba(0,0,0,0) 100%);
+}
+
+.cover {
+  height: 300px;
+  background: linear-gradient(rgba(33, 150, 243, .4), rgba(33, 150, 243, .1)), url("http://i.imgur.com/OOi7g8z.png") no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  h1, h2 {
+    color: #FFF;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}
+
+.opslag {
+  .beholder {
+    border-bottom: 1px dotted #CCC;
+    clear: both;
+    overflow: auto;
+    margin: 10px 0;
+
+    .overskrift {
+      float: left;
+      font-size: 20px;
+      color: #1d58a7;
+    }
+    .social {
+      float: right;
+      font-size: 20px;
+
+      .fa-facebook-official {
+        color: #3b5998;
+      }
+
+      .fa-twitter {
+        color: #55acee;
+      }
+
+      .fa-google-plus-square {
+        color: #dd4b39;
+      }
+
+      .fa-pinterest {
+        color: #cb2027;
+      }
+
+      .fa:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  
+  .tekst {
+    text-align: justify;
+    font-size: 16px;
+  }
+
+  .specs {
+    .prPlads {
+      height: 45px;
+      border-radius: 20px;
+      width: 300px;
+      margin: 0 auto;
+      overflow: hidden;
+
+      .prKnap {
+        display: block;
+        position: relative;
+        height: 50px;
+        z-index: 22;
+        margin: 0 auto;
+
+        &:hover .prKnappen {
+          transform: translate(-240px, 0);
+          cursor: pointer;
+        }
+
+        .prKnappen {
+          background: #faba00;
+          padding: 10px 20px;
+          border-radius: 20px;
+          color: #FFF;
+          font-weight: bold;
+          position: absolute;
+          width: 300px;
+          top: 0;
+          text-align: center;
+          margin: 0 auto;
+          display: block;
+          z-index: 1;
+          line-height: 25px;
+          transition: all 1s ease-in-out;
+          cursor: pointer;
+        }
+
+        img {
+          float: right;
+        }
+
+        .prPris {
+          position: absolute;
+          background: #0072b4;
+          width: 297px;
+          height: 45px;
+          left: 2px;
+          top: 0px;
+          border-radius: 20px;
+          text-align: center;
+          color: #FFF;
+          line-height: 45px;
+          font-weight: bold;
+          pointer-events: none;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .specover {
+      color: #1d58a7;
+      font-size: 17px;
+      border-bottom: 1px dotted #CCC;
+      width: 100%;
+      display: block;
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+    }
+    .specifikationer {
+      background: rgba(#c7e5fc, .5);
+      padding: 10px;
+
+      .spec {
+        font-weight: bold;
+        width: 50%;
+        padding-bottom: 10px;
+      }
+
+      .spectekst {
+        padding-bottom: 10px;
+      }
+    }
+  }
+
+  .opover {
+    color: #1d58a7;
+    font-size: 17px;
+    border-bottom: 1px dotted #CCC;
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+  }
+
+  .billede {
+    text-align: center;
+    margin: 20px 0;
+
+    img {
+      width: 70%;
+      min-height: 212px;
+    }
+  }
+
+  .vurdering {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    .vurderingOverskrift {
+      color: #1d58a7;
+      font-size: 17px;
+      border-bottom: 1px dotted #CCC;
+      width: 100%;
+      display: block;
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+    }
+
+    .vurderingStjerner {
+      text-align: center;
+
+      .fa {
+        font-size: 40px;
+        color: #1d58a7;
+      }
+    }
+
+    .vurderingAntal {
+      color: #1d58a7;
+      width: 100%;
+      text-align: right;
+      font-size: 20px;
+    }
+  }
+}

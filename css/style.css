@@ -1,0 +1,398 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  position: relative;
+  min-height: 100%;
+  background: #FAFAFA; }
+
+body {
+  margin: 0 0 40px;
+  background: #FAFAFA;
+  font-family: 'Roboto', sans-serif; }
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20456;
+  padding: 10px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent); }
+  header ul {
+    float: right; }
+    header ul #soegFelt {
+      display: none; }
+    header ul li {
+      list-style: none;
+      display: inline-block;
+      color: #FAFAFA;
+      line-height: 90px;
+      margin: 0 10px;
+      font-size: 16px; }
+      header ul li input {
+        background: transparent;
+        border: none;
+        height: 25px;
+        border-bottom: 1px solid #FAFAFA;
+        color: #FAFAFA; }
+        header ul li input::-webkit-input-placeholder {
+          color: #FAFAFA; }
+
+.newest {
+  height: 100vh;
+  background: linear-gradient(#1565C0, rgba(33, 150, 243, 0.5)), url("https://i.ytimg.com/vi/Au6oiSa_268/maxresdefault.jpg") no-repeat;
+  background-size: cover;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  overflow: hidden;
+  position: relative; }
+  .newest .tekst {
+    color: #FAFAFA;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100vh; }
+    .newest .tekst h1, .newest .tekst h2 {
+      margin: 0; }
+    .newest .tekst .knap {
+      padding: 10px 40px;
+      text-align: center;
+      border: 2px solid #FAFAFA;
+      line-height: 70px;
+      font-size: 18px;
+      border-radius: 19px;
+      transition: all .3s ease-in-out; }
+      .newest .tekst .knap:hover {
+        background: #FAFAFA;
+        color: #000;
+        cursor: pointer; }
+  .newest .billede {
+    height: 100vh;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center; }
+    .newest .billede img {
+      width: 100%;
+      z-index: 11; }
+  .newest:before {
+    content: '';
+    display: block;
+    background: #FAFAFA;
+    position: absolute;
+    bottom: -70%;
+    left: 0;
+    height: 100%;
+    width: 110%;
+    -webkit-transform: rotate(-6.7deg);
+    -ms-transform: rotate(-6.7deg);
+    transform: rotate(-6.7deg);
+    background: #FAFAFA; }
+
+.blog {
+  background: #FAFAFA; }
+  .blog .seneste h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 28px; }
+  .blog .col-md-4 {
+    margin-bottom: 15px;
+    height: 250px;
+    position: relative;
+    -webkit-perspective: 1000px;
+    perspective: 1000px; }
+    .blog .col-md-4:hover .senesteOpslag {
+      -webkit-transform: rotateX(120deg) translate(0, 0px);
+      transform: rotateX(120deg) translate(0, 0px); }
+    .blog .col-md-4:hover .opslagTekst {
+      box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+      cursor: pointer; }
+    .blog .col-md-4:hover .overskrift {
+      -webkit-transform: rotate(180deg) scaleX(-1);
+      -ms-transform: rotate(180deg) scaleX(-1);
+      transform: rotate(180deg) scaleX(-1); }
+    .blog .col-md-4 .senesteOpslag {
+      z-index: 10;
+      transition: all .7s ease-in-out;
+      -webkit-transform-origin: top center;
+      -ms-transform-origin: top center;
+      transform-origin: top center; }
+    .blog .col-md-4 .senesteOpslag, .blog .col-md-4 .opslagTekst {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 92%;
+      background: pink;
+      text-align: center;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+      align-content: center; }
+      .blog .col-md-4 .senesteOpslag .overskrift, .blog .col-md-4 .opslagTekst .overskrift {
+        font-size: 20px;
+        font-weight: 500;
+        color: #FAFAFA;
+        text-shadow: 0 0 5px #000;
+        transition: .7s ease-in-out; }
+    .blog .col-md-4 .opslagTekst {
+      background: #EEE;
+      padding: 0 20px;
+      transition: all .7s ease-in-out;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .blog .col-md-4 .opslagTekst .blogOverskrift {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 5px; }
+    .blog .col-md-4 .nr1 {
+      background: url("https://cnet2.cbsistatic.com/img/LibAeUYyHxrRgOzRZZkWGKvIm8I=/770x433/2017/03/28/986492e6-7611-44e7-9cc7-30d90563a7e0/flsamsunggalaxys8.jpg") no-repeat;
+      background-size: cover; }
+    .blog .col-md-4 .nr2 {
+      background: url("http://www.droid-life.com/wp-content/uploads/2017/03/Gear-360-2017-1-of-1.jpg") no-repeat;
+      background-size: cover; }
+    .blog .col-md-4 .nr3 {
+      background: url("http://images.techtimes.com/data/images/full/277397/samsung-galaxy-note-7.jpg") no-repeat;
+      background-size: cover; }
+    .blog .col-md-4 .nr4 {
+      background: url("http://i.investopedia.com/content/daily_blog/samsung_post_most_pr/shutterstock_237645046.jpg") no-repeat;
+      background-size: cover; }
+    .blog .col-md-4 .nr5 {
+      background: url("http://photos2.appleinsidercdn.com/gallery/18116-16260-note7burn-top-l.jpg") no-repeat;
+      background-size: cover; }
+    .blog .col-md-4 .nr6 {
+      background: url("https://fscl01.fonpit.de/userfiles/6727621/image/2017/Samsung-Galaxy-a3-2017/AndroidPIT-Samsung-Galaxy-a3-2017-4750-w782.jpg") no-repeat;
+      background-size: cover; }
+
+.reklame {
+  margin-bottom: 80px; }
+  .reklame .reklamePlads {
+    width: 100%;
+    background: rgba(238, 238, 238, 0.5);
+    background-image: url("http://placehold.it/1110x120");
+    background-repeat: no-repeat;
+    text-align: center;
+    height: 120px;
+    line-height: 120px;
+    font-size: 30px;
+    text-transform: uppercase;
+    border: 1px solid #DDD; }
+
+header {
+  background: linear-gradient(to bottom, rgba(9, 96, 165, 0.65) 0%, transparent 100%); }
+
+.cover {
+  height: 300px;
+  background: linear-gradient(rgba(33, 150, 243, 0.4), rgba(33, 150, 243, 0.1)), url("http://i.imgur.com/OOi7g8z.png") no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center; }
+  .cover h1, .cover h2 {
+    color: #FFF;
+    margin: 0; }
+  .cover h2 {
+    font-size: 20px; }
+
+.opslag .beholder {
+  border-bottom: 1px dotted #CCC;
+  clear: both;
+  overflow: auto;
+  margin: 10px 0; }
+  .opslag .beholder .overskrift {
+    float: left;
+    font-size: 20px;
+    color: #1d58a7; }
+  .opslag .beholder .social {
+    float: right;
+    font-size: 20px; }
+    .opslag .beholder .social .fa-facebook-official {
+      color: #3b5998; }
+    .opslag .beholder .social .fa-twitter {
+      color: #55acee; }
+    .opslag .beholder .social .fa-google-plus-square {
+      color: #dd4b39; }
+    .opslag .beholder .social .fa-pinterest {
+      color: #cb2027; }
+    .opslag .beholder .social .fa:hover {
+      cursor: pointer; }
+
+.opslag .tekst {
+  text-align: justify;
+  font-size: 16px; }
+
+.opslag .specs .prPlads {
+  height: 45px;
+  border-radius: 20px;
+  width: 300px;
+  margin: 0 auto;
+  overflow: hidden; }
+  .opslag .specs .prPlads .prKnap {
+    display: block;
+    position: relative;
+    height: 50px;
+    z-index: 22;
+    margin: 0 auto; }
+    .opslag .specs .prPlads .prKnap:hover .prKnappen {
+      -webkit-transform: translate(-240px, 0);
+      -ms-transform: translate(-240px, 0);
+      transform: translate(-240px, 0);
+      cursor: pointer; }
+    .opslag .specs .prPlads .prKnap .prKnappen {
+      background: #faba00;
+      padding: 10px 20px;
+      border-radius: 20px;
+      color: #FFF;
+      font-weight: bold;
+      position: absolute;
+      width: 300px;
+      top: 0;
+      text-align: center;
+      margin: 0 auto;
+      display: block;
+      z-index: 1;
+      line-height: 25px;
+      transition: all 1s ease-in-out;
+      cursor: pointer; }
+    .opslag .specs .prPlads .prKnap img {
+      float: right; }
+    .opslag .specs .prPlads .prKnap .prPris {
+      position: absolute;
+      background: #0072b4;
+      width: 297px;
+      height: 45px;
+      left: 2px;
+      top: 0px;
+      border-radius: 20px;
+      text-align: center;
+      color: #FFF;
+      line-height: 45px;
+      font-weight: bold;
+      pointer-events: none;
+      cursor: pointer; }
+
+.opslag .specs .specover {
+  color: #1d58a7;
+  font-size: 17px;
+  border-bottom: 1px dotted #CCC;
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  padding-bottom: 5px; }
+
+.opslag .specs .specifikationer {
+  background: rgba(199, 229, 252, 0.5);
+  padding: 10px; }
+  .opslag .specs .specifikationer .spec {
+    font-weight: bold;
+    width: 50%;
+    padding-bottom: 10px; }
+  .opslag .specs .specifikationer .spectekst {
+    padding-bottom: 10px; }
+
+.opslag .opover {
+  color: #1d58a7;
+  font-size: 17px;
+  border-bottom: 1px dotted #CCC;
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  padding-bottom: 5px; }
+
+.opslag .billede {
+  text-align: center;
+  margin: 20px 0; }
+  .opslag .billede img {
+    width: 70%;
+    min-height: 212px; }
+
+.opslag .vurdering {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+  .opslag .vurdering .vurderingOverskrift {
+    color: #1d58a7;
+    font-size: 17px;
+    border-bottom: 1px dotted #CCC;
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    padding-bottom: 5px; }
+  .opslag .vurdering .vurderingStjerner {
+    text-align: center; }
+    .opslag .vurdering .vurderingStjerner .fa {
+      font-size: 40px;
+      color: #1d58a7; }
+  .opslag .vurdering .vurderingAntal {
+    color: #1d58a7;
+    width: 100%;
+    text-align: right;
+    font-size: 20px; }
+
+footer {
+  background: #212121;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden; }
+  footer div {
+    text-align: center;
+    color: #FAFAFA;
+    padding: 10px; }

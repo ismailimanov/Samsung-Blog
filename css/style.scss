@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import 'responsive';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+  background: #FAFAFA;
+}
+
+body {
+  margin: 0 0 40px;
+  background: #FAFAFA;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20456;
+  padding: 10px;
+  background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,0));
+
+  ul {
+    float: right;
+
+    #soegFelt {
+      display: none;
+    }
+
+    li {
+      list-style: none;
+      display: inline-block;
+      color: #FAFAFA;
+      line-height: 90px;
+      margin: 0 10px;
+      font-size: 16px;
+
+      input {
+        background: transparent;
+        border: none;
+        height: 25px;
+        border-bottom: 1px solid #FAFAFA;
+        color: #FAFAFA;
+
+        &::-webkit-input-placeholder {
+          color: #FAFAFA;
+        }
+      }
+    }
+  }
+}
+
+.newest {
+  height: 100vh;
+  background: linear-gradient(#1565C0, rgba(33, 150, 243, .5)), url("https://i.ytimg.com/vi/Au6oiSa_268/maxresdefault.jpg") no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  overflow: hidden;
+  position: relative;
+
+  .tekst {
+    color: #FAFAFA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    height: 100vh;
+
+    h1, h2 {
+      margin: 0;
+    }
+
+    .knap {
+      padding: 10px 40px;
+      text-align: center;
+      border: 2px solid #FAFAFA;
+      line-height: 70px;
+      font-size: 18px;
+      border-radius: 19px;
+      transition: all .3s ease-in-out;
+
+      &:hover {
+        background: #FAFAFA;
+        color: #000;
+        cursor: pointer;
+      }
+
+    }
+  }
+
+  .billede {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    img {
+      width: 100%;
+      z-index: 11;
+    }
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    background: #FAFAFA;
+    position: absolute;
+    bottom: -70%;
+    left: 0;
+    height: 100%;
+    width: 110%;
+    transform: rotate(-6.7deg);
+    background: #FAFAFA;
+
+  }
+}
+
+.blog {
+  background: #FAFAFA;
+
+  .seneste h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 28px;
+  }
+
+  .col-md-4 {
+    margin-bottom: 15px;
+    height: 250px;
+    position: relative;
+    perspective: 1000px;
+
+    &:hover .senesteOpslag {
+      transform: rotateX(120deg) translate(0, 0px);
+      // filter: blur(2px);
+    }
+
+    &:hover .opslagTekst {
+      box-shadow: 0 8px 6px -6px rgba(0,0,0,.5);
+      cursor: pointer;
+    }
+
+    &:hover .overskrift {
+      transform: rotate(180deg) scaleX(-1);
+    }
+
+    .senesteOpslag {
+      z-index: 10;
+      transition: all .7s ease-in-out;
+      transform-origin: top center;
+    }
+
+    .senesteOpslag, .opslagTekst {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 92%;
+      background: pink;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+
+      .overskrift {
+        font-size: 20px;
+        font-weight: 500;
+        color: #FAFAFA;
+        text-shadow: 0 0 5px #000;
+        transition: .7s ease-in-out;
+      }
+    }
+
+    .opslagTekst {
+      background: #EEE;
+      padding: 0 20px;
+      transition: all .7s ease-in-out;
+      flex-direction: column;
+
+      .blogOverskrift {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 5px;
+      }
+    }
+
+    .nr1 {
+      background: url("https://cnet2.cbsistatic.com/img/LibAeUYyHxrRgOzRZZkWGKvIm8I=/770x433/2017/03/28/986492e6-7611-44e7-9cc7-30d90563a7e0/flsamsunggalaxys8.jpg") no-repeat;
+      background-size: cover;
+    }
+
+    .nr2 {
+      background: url("http://www.droid-life.com/wp-content/uploads/2017/03/Gear-360-2017-1-of-1.jpg") no-repeat;
+      background-size: cover;
+    }
+
+    .nr3 {
+      background: url("http://images.techtimes.com/data/images/full/277397/samsung-galaxy-note-7.jpg") no-repeat;
+      background-size: cover;
+    }
+
+    .nr4 {
+      background: url("http://i.investopedia.com/content/daily_blog/samsung_post_most_pr/shutterstock_237645046.jpg") no-repeat;
+      background-size: cover;
+    }
+
+    .nr5 {
+      background: url("http://photos2.appleinsidercdn.com/gallery/18116-16260-note7burn-top-l.jpg") no-repeat;
+      background-size: cover;
+    }
+
+    .nr6 {
+      background: url("https://fscl01.fonpit.de/userfiles/6727621/image/2017/Samsung-Galaxy-a3-2017/AndroidPIT-Samsung-Galaxy-a3-2017-4750-w782.jpg") no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+.reklame {
+  margin-bottom: 80px;
+
+  .reklamePlads {
+    width: 100%;
+    background: rgba(238, 238, 238, .5);
+    background-image: url("http://placehold.it/1110x120");
+    background-repeat: no-repeat;
+    text-align: center;
+    height: 120px;
+    line-height: 120px;
+    font-size: 30px;
+    text-transform: uppercase;
+    border: 1px solid #DDD;
+  }
+}
+
+@import 'opslag';
+
+footer {
+  background: #212121;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  div {
+    text-align: center;
+    color: #FAFAFA;
+    padding: 10px;
+  }
+}
