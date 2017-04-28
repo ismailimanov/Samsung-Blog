@@ -337,6 +337,8 @@ header {
       font-weight: bold;
       pointer-events: none;
       cursor: pointer; }
+  .opslag .specs .prPlads:hover {
+    cursor: pointer; }
 
 .opslag .specs .specover {
   color: #1d58a7;
