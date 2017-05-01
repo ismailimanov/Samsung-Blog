@@ -12,11 +12,19 @@
 
 @media screen and (max-width: 421px) {
   .tekst {
-    margin-top: 60px; }
+    margin-top: 0px; }
   .billede {
     margin-top: -100px; }
   .newest:before {
-    left: 20px !important; } }
+    left: 10px !important; } }
+
+@media screen and (max-width: 600px) {
+  .newestTekst {
+    text-align: center; }
+    .newestTekst h2 {
+      font-size: 20px; }
+    .newestTekst h1 {
+      font-size: 29px; } }
 
 * {
   margin: 0;
