@@ -5,4 +5,26 @@
   .resmen {
     display: block !important;
   }
+
+  .tekst, .billede {
+    height: 50vh !important;
+  }
+
+  .billede {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: 421px) {
+  .tekst {
+    margin-top: 60px;
+  }
+
+  .billede {
+    margin-top: -100px;
+  }
+
+  .newest:before {
+    left: 20px !important;
+  }
 }
