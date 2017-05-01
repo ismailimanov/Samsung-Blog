@@ -5,9 +5,10 @@
   .resmen {
     display: block !important;
   }
-
-  .tekst, .billede {
-    height: 50vh !important;
+  .newest {
+    .tekst, .billede {
+      height: 50vh !important;
+    }
   }
 
   .billede {

@@ -5,7 +5,7 @@
     display: none; }
   .resmen {
     display: block !important; }
-  .tekst, .billede {
+  .newest .tekst, .newest .billede {
     height: 50vh !important; }
   .billede {
     margin-top: 60px; } }
